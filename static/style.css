@@ -1,0 +1,146 @@
+/* ======== ESTILO GLOBAL ======== */
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #0e0e0e;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-top: 55px; /* espaço ajustado à nova altura da navbar */
+    margin: 0;
+}
+
+/* ======== NAVBAR ======== */
+.navbar {
+    background-color: #101820;
+    padding-top: 0.15rem !important;
+    padding-bottom: 0.15rem !important;
+    min-height: 40px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.navbar .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.navbar-brand {
+    font-size: 1rem; /* título menor */
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    padding-top: 0.15rem !important;
+    padding-bottom: 0.15rem !important;
+}
+
+.navbar a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00bfff;
+}
+
+.navbar-toggler {
+    padding: 0.15rem 0.35rem;
+}
+
+/* ======== CONTEÚDO ======== */
+.container {
+    flex: 1;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+/* ======== CARDS ======== */
+.card {
+    background-color: #1a1a1a;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+}
+
+.card-title {
+    color: #00bfff;
+    font-weight: 600;
+}
+
+/* ======== FOOTER ======== */
+footer {
+    background-color: #101820;
+    color: #ccc;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: auto;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* ======== LINKS GERAIS ======== */
+a {
+    color: #00bfff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #33ccff;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* ajusta espaço da navbar no mobile */
+    }
+
+    .navbar-brand {
+        font-size: 0.95rem;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* ======== CARDS ======== */
+.card {
+    background-color: #1a1a1a;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+}
+
+/* Título azul */
+.card-title {
+    color: #00bfff;
+    font-weight: 600;
+}
+
+/* Texto branco */
+.card-text {
+    color: #ffffff;
+}
+

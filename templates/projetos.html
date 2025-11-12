@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center text-info mb-5">Projetos</h2>
+
+<div class="row g-4">
+  {% for projeto in [
+    {"titulo": "Gerador de Primers com Cálculo de Tm", "desc": "App em Flask que gera primers e calcula Tm automaticamente utilizando localizações aleatórias para se ter um grande número de possibilidades."},
+    {"titulo": "Sistema de Login e Administração de Clínicas", "desc": "Aplicação Flask + MySQL com autenticação, gerenciamento de pacientes e relatórios. Páginas de usuários com cadastro de profissionais."},
+    {"titulo": "Análise de SNPs", "desc": "Script Python para detecção e interpretação de polimorfismos em sequências genéticas. Com a devida classificação tendo como base a localização da variação."},
+    {"titulo": "Banco de Dados SQLite → MySQL", "desc": "Projeto demonstrando criação, migração e consultas SQL integradas a Python. Utilização do sqlalchemy para gerenciamento dos dados"},
+    {"titulo": "Software de Request no Ensembl e NCBI", "desc": "Script para busca automatizada de dados genéticos via APIs do Ensembl e NCBI. Cruzamento das informações de cada banco para possibilitar análise de uma sequência."}
+  ] %}
+  <div class="col-md-6 col-lg-4">
+    <div class="card p-3 h-100">
+      <h5 class="card-title">{{ projeto.titulo }}</h5>
+      <p class="card-text">{{ projeto.desc }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

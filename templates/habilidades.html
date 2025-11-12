@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-center text-info mb-5">Exemplos de habilidades</h2>
+
+<div class="row g-4">
+  {% for projeto in [
+    {"titulo": "Localizador de SNPS", "desc": "Um algoritmo em python que utiliza das funcionalidades das bibliotecas BioPython e Request para localizar os SNPS de uma determinada região a partir de uma sequência específica.", "link": "https://github.com/DBPF-BioInf/Localizador-de-SNPs", "img": url_for('static', filename='img/snps_exemplo.jpg')},
+    {"titulo": "Analisador de primers", "desc": "Aplicação em python para identificar diversos parâmetros importantes na produção de primers tais como a porcentagem de bases nitrogenadas e complementariedade.", "link": "https://github.com/DBPF-BioInf/An-lise-de-primers", "img": url_for('static', filename='img/primers_exemplo.jpg')},
+    {"titulo": "Sistema de cadastro de clínicas", "desc": "Um pequeno projeto para demonstrar a utilização do python como controle para o flask e manutenção de um banco de dados em SQL.", "link": "https://github.com/DBPF-BioInf/Projeto-de-sistema-de-cl-nicas"},
+  ] %}
+  <div class="col-md-6 col-lg-4">
+    <a href="{{ projeto.link }}" target="_blank" class="text-decoration-none text-reset">
+      <div class="card p-3 h-100 shadow-sm card-hover">
+        {% if projeto.img %}
+        <img src="{{ projeto.img }}" class="card-img-top mb-3 rounded" alt="{{ projeto.titulo }}">
+        {% endif %}
+        <h5 class="card-title">{{ projeto.titulo }}</h5>
+        <p class="card-text">{{ projeto.desc }}</p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+
+<style>
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+</style>
+{% endblock %}
