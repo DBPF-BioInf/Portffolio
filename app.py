@@ -24,7 +24,8 @@ def habilidades():
 
 @app.route('/baixar_curriculo')
 def baixar_curriculo():
-    return send_file('static/Daniel_Barbosa_Curriculo.pdf', as_attachment=True)
+    return send_file('static/curriculo_Daniel_Barbosa.pdf', as_attachment=True)
 
 if __name__ == '__main__':
     app.run(debug=True) #noqa
+
